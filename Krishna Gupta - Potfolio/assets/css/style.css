@@ -2,15 +2,6 @@
   #style.css
 \*-----------------------------------*/
 
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
@@ -53,6 +44,10 @@
     hsl(45, 100%, 72%), 
     hsl(35, 100%, 68%)
   );
+  --preloader-gradient-yellow: radial-gradient(circle,
+      hsl(45, 94%, 67%),
+      hsl(35, 83%, 61%),
+      hsl(35, 98%, 63%));
 
   /* solid */
 
@@ -314,6 +309,55 @@ main {
   margin-bottom: 75px;
   min-width: 259px;
 }
+
+/*-----------------------------------*\
+  #PREALOADER
+\*-----------------------------------*/
+
+.preloaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(240, 3%, 7%);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  margin: 10px 4px;
+  width: 11px;
+  height: 10px;
+  max-height: 180px;
+  background: var(--preloader-gradient-yellow);
+  border-radius: 100px;
+  transition : opacity 0.5s ease;
+}
+
+@keyframes anim1 {
+  0% {
+    height: 1px;
+  }
+
+  50% {
+    height: 120px;
+  }
+
+  100% {
+    height: 1px;
+  }
+}
+
+/* Animation delays for wave effect */
+.line1 { animation: anim1 0.8s linear infinite; animation-delay: 0s; }
+.line2 { animation: anim1 0.8s linear infinite; animation-delay: 0.1s; }
+.line3 { animation: anim1 0.8s linear infinite; animation-delay: 0.2s; }
+.line4 { animation: anim1 0.8s linear infinite; animation-delay: 0.3s; }
+.line5 { animation: anim1 0.8s linear infinite; animation-delay: 0.4s; }
+.line6 { animation: anim1 0.8s linear infinite; animation-delay: 0.5s; }
 
 
 
