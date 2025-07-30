@@ -1,6 +1,12 @@
 'use strict';
 
+//preloader
+const preloader = document.querySelector("#preloader");
 
+window.addEventListener("load", function () {
+  preloader.style.display = "none";
+  preloader.style.transition = "opacity 0.5s ease";
+});
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
